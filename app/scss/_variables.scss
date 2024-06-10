@@ -1,0 +1,64 @@
+:root {
+    // -----------Animation Time----------
+    --ani-2: all 0.2s 0s ease;
+    --ani-3: all 0.3s 0s ease;
+    --ani-4: all 0.4s 0s ease;
+    --ani-5: all 0.5s 0s ease;
+    // -----------Opecity----------
+    --op-thr: 0.3;
+    --op-n: 0.9;
+    --op-e: 0.8;
+    --op-f: 0.5;
+    // _______________Font Type__________________
+    --font-t: 100;
+    --font-el: 200;
+    --font-l: 300;
+    --font-r: 400;
+    --font-m: 500;
+    --font-sb: 600;
+    --font-b: 700;
+    --font-eb: 800;
+    --font-black: 900;
+    --font-eblack: 950;
+    // _______________Font Sany__________________
+    --font-demi: 600;
+}
+
+// _____________REM______________
+$rem-size: 18px;
+// _____________Background Images Location______________
+$localbg: "../../assets/images";
+// -----------Animation Time----------
+$ani-2:var(--ani-2);
+$ani-3:var(--ani-3);
+$ani-4:var(--ani-4);
+$ani-5:var(--ani-5);
+// -----------Opecity----------
+$op-thr:var(--op-thr);
+$op-n:var(--op-n);
+$op-e:var(--op-e);
+$op-f:var(--op-f);
+// _____________________Font Veriable___________________
+$pf-font: 'Noto Sans', sans-serif;
+$sf-font: 'Lora', serif;
+// _______________Font Type__________________
+$font-t: var(--font-t); //Thin (Hairline)
+$font-el: var(--font-el); //Extra Light (Ultra Light)
+$font-l: var(--font-l); //Light
+$font-r: var(--font-r); //Normal (Regular)
+$font-m: var(--font-m); //Medium
+$font-sb: var(--font-sb); //Semi Bold (Demi Bold)
+$font-b: var(--font-b); //Bold
+$font-eb: var(--font-eb); //Extra Bold (Ultra Bold)
+$font-black: var(--font-black); //Black (Heavy)
+$font-eblack: var(--font-eblack); // Extra Black (Ultra Black)
+// _______________Font Sany__________________
+$font-demi: var(--font-demi); //600
+$font-d: var(--font-demi); //600
+
+/*
+Futura PT, Medium-
+Futura PT, Book-
+Futura PT, Demi
+
+*/

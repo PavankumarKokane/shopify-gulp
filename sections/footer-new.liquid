@@ -1,0 +1,308 @@
+  <div class="section">
+    <div class="container">
+      <div class="footer-main-div">
+          {% if section.blocks.size > 0 %}
+            {% for block in section.blocks %}
+              {% if block.type == 'footer_menu' %}
+                {% if block.settings.select_footer_menu.links.size > 0 %}
+                  <div class="menu-point">
+                    <p class="menu-title">{{ block.settings.select_footer_menu.title }}</p>
+                    <ul>
+                      {% for menu in block.settings.select_footer_menu.links %}
+                        <li>
+                          <a class="menu-links" href="{{ menu.url }}">{{ menu.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+        <div class="contact-us">
+            {% for block in section.blocks %}
+              {% if block.type == 'contact_us' %}
+                  <div class="menu-point">
+                    <p class="menu-title">{{ block.settings.contact_us.title }}</p>
+                    <div class="contact-point">
+                      <img loading="lazy" src="{{ block.settings.contact_address_icon | img_url }}" height="78" width="224" alt="Footer Image">
+                      <p class="menu-content">{{ block.settings.contact_address }}</p>
+                    </div>
+                    <div class="contact-point">
+                      <img loading="lazy" src="{{ block.settings.phone_icon | img_url }}" height="78" width="224" alt="Footer Image">
+                      <p class="menu-content">{{ block.settings.phone_number }}</p>
+                    </div>
+                    <div class="contact-point">
+                      <img loading="lazy" src="{{ block.settings.email_icon | img_url }}" height="78" width="224" alt="Footer Image">
+                      <p class="menu-content">{{ block.settings.email_id }}</p>
+                    </div>
+                  </div>
+              {% endif %}
+            {% endfor %}
+        </div>
+      </div>
+      <div class="social-newsletter">
+        <div class="social-links-div">
+          <div>
+            {% if section.settings.copyright_text != blank %}
+              <p class="copyright-text">{{ section.settings.copyright_text }}<p>
+            {% endif %}
+            <p>{{ section.settings.privacy_policy_title }}</p>
+          </div>
+          <ul>
+            {% for block in section.blocks %}
+              {% if block.type == 'social_links' %}
+                <li>
+                  <a href="{{ block.settings.profile_link }}" target="_blank">
+                    <img loding="lazy" src="{{ block.settings.logo | img_url: 'master' }}" height="40" width="40" >
+                  </a>
+              </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "footer",
+  "class": "footer-new",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Copyright Text",
+      "id": "copyright_text",
+      "default": "© Copyright 2023. Ari Healthcare",
+      "placeholder": "Enter Copyright Text"
+    },
+    {
+      "type": "text",
+      "label": "Privacy Policy Title",
+      "id": "privacy_policy_title"
+    },
+    {
+      "type": "url",
+      "label": "Privacy Policy",
+      "id": "privacy_policy_url"
+    },
+    {
+      "type": "text",
+      "label": "Terms and Condition Title",
+      "id": "terms_and_condition_title"
+    },
+    {
+      "type": "url",
+      "label": "Terms and Condition",
+      "id": "terms_and_condition_url"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "footer_social_icons",
+      "name": "Footer Social Icons",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Select Social Icon",
+          "id": "select_social_icon"
+        },
+        {
+          "type": "url",
+          "label": "Select Social Link",
+          "id": "select_social_link"
+        }
+      ]
+    },
+    {
+      "type": "footer_menu",
+      "name": "Footer Menu",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "link_list",
+          "label": "Select Footer Menu",
+          "id": "select_footer_menu"
+        }
+      ]
+    },
+    {
+      "type": "contact_us",
+      "name": "Contact Us",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Contact Address Icon",
+          "id": "contact_address_icon"
+        },
+        {
+          "type": "text",
+          "label": "Contact Address",
+          "id": "contact_address",
+          "placeholder": "Enter Contact Address"
+        },
+        {
+          "type": "image_picker",
+          "label": "Phone Icon",
+          "id": "phone_icon"
+        },
+        {
+          "type": "text",
+          "label": "Phone Number",
+          "id": "phone_number",
+          "placeholder": "Enter Phone Number"
+        },
+        {
+          "type": "image_picker",
+          "label": "Email Icon",
+          "id": "email_icon"
+        },
+        {
+          "type": "text",
+          "label": "Email Id",
+          "id": "email_id",
+          "placeholder": "Enter Email ID"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "My New Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.footer-new {
+    background: #352519;
+    padding: 70px 0 40px;
+}
+
+.footer-new .footer-main-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
+}
+.footer-new .footer-main-div .contact-us{}
+.footer-new .footer-main-div .menu-point .menu-title {
+    font-size: 32px;
+    line-height: 43px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.footer-new .footer-main-div .menu-point .menu-links{
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #fff;
+}
+.footer-new .footer-main-div .social-newsletter .social-links-div {
+    margin-top: 50px;
+}
+.footer-new .footer-main-div .social-newsletter .social-links-div .social-title {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+.footer-new .footer-main-div .social-newsletter .social-links-div ul {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.copy-rights,
+.copy-rights a {
+    background: #009ab1;
+    color: #fff;
+}
+.copy-rights .rights-main-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+@media only screen and (max-width: 1024px) {
+    .footer-new .footer-main-div {
+        grid-gap: 50px;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .footer-new .footer-main-div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .footer-new{
+      padding: 60px 0 40px;
+    }
+    .footer-new .footer-main-div .logo-div {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .footer-new .footer-main-div .logo-div img {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+    }
+    .footer-new .footer-main-div .footer-content,
+    .footer-new .footer-main-div .menus-list-div,
+    .footer-new .footer-main-div .social-newsletter {
+        text-align: center;
+    }
+    .footer-new .footer-main-div .menus-list-div ul {
+        display: flex;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .footer-new .footer-main-div .menu-point {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    .footer-new .footer-main-div .menus-list-div ul li {
+        position: relative;
+    }
+    .footer-new .footer-main-div .menus-list-div ul li:after {
+        content: "";
+        position: absolute;
+        height: 50%;
+        right: -5px;
+        top: 50%;
+        transform: translate(5px, -50%);
+        border: 0.5px solid #fff;
+    }
+    .footer-new .footer-main-div .menus-list-div ul li:last-child:after {
+        content: unset;
+    }
+    .footer-new .footer-main-div .social-newsletter .social-links-div ul {
+        justify-content: center;
+    }
+    .copy-rights .rights-main-div{
+      flex-direction: column;
+    }
+}
+{% endstylesheet %}
+
+{% javascript %}
+function getCurrentYear() {
+    return new Date().getFullYear();
+}
+function updateYear() {
+    const yearElement = document.getElementById("year");
+    if (yearElement) {
+        yearElement.textContent = getCurrentYear();
+    }
+}
+updateYear();
+{% endjavascript %}

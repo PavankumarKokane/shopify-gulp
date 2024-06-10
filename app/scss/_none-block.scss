@@ -1,0 +1,167 @@
+/*/////////////////////////// D-NONE D-BLOCK in Media /////////////////*/
+
+@include max(d-1024) {
+    /*Show and Hide*/
+    @include config-class('d-1024-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-1024-none {
+    //     display: none;
+    // }
+    // .d-1024-none-i {
+    //     display: none!important;
+    // }
+    // .d-1024-block {
+    //     display: block;
+    // }
+    // .d-1024-block-i {
+    //     display: block!important;
+    // }
+    // /*Show and Hide End*/
+}
+
+@include max(d-991) {
+    /*Show and Hide*/
+    @include config-class('d-991-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-991-none {
+    //     display: none;
+    // }
+    // .d-991-none-i {
+    //     display: none!important;
+    // }
+    // .d-991-block {
+    //     display: block;
+    // }
+    // .d-991-block-i {
+    //     display: block!important;
+    // }
+    /*Show and Hide End*/
+}
+
+@include minmax(d-991, d-1024) {
+    /*Show and Hide*/
+    @include config-class('d-991T1024-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-991T1024-none {
+    //     display: none;
+    // }
+    // .d-991T1024-none-i {
+    //     display: none!important;
+    // }
+    // .d-991T1024-block {
+    //     display: block;
+    // }
+    // .d-991T1024-block-i {
+    //     display: block!important;
+    // }
+    /*Show and Hide End*/
+}
+
+@include minmax(d-768, d-1024) {
+    @include config-class('d-768T1024-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-768T1024-none {
+    //     display: none;
+    // }
+    // .d-768T1024-none-i {
+    //     display: none!important;
+    // }
+    // .d-768T1024-block {
+    //     display: block;
+    // }
+    // .d-768T1024-block-i {
+    //     display: block!important;
+    // }
+    /*Show and Hide End*/
+}
+
+
+/*Show and Hide*/
+
+@include max(d-768) {
+    @include config-class('d-768-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-768-none {
+    //     display: none;
+    // }
+    // .d-768-none-i {
+    //     display: none!important;
+    // }
+    // .d-768-block {
+    //     display: block;
+    // }
+    // .d-768-block-i {
+    //     display: block!important;
+    // }
+    /*Show and Hide End*/
+}
+
+@include max(d-767) {
+    /*Show and Hide*/
+    @include config-class('d-767-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-767-none {
+    //     display: none;
+    // }
+    // .d-767-none-i {
+    //     display: none!important;
+    // }
+    // .d-767-block {
+    //     display: block;
+    // }
+    // .d-767-block-i {
+    //     display: block!important;
+    // }
+    /*Show and Hide End*/
+}
+
+@include max(d-600) {
+    /*Show and Hide*/
+    @include config-class('d-600-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-767-none {
+    //     display: none;
+    // }
+    // .d-767-none-i {
+    //     display: none!important;
+    // }
+    // .d-767-block {
+    //     display: block;
+    // }
+    // .d-767-block-i {
+    //     display: block!important;
+    // }
+    /*Show and Hide End*/
+}
+
+
+/*land*/
+
+@include max(d-480) {
+    /*Show and Hide*/
+    @include config-class('d-480-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-480-none {
+    //     display: none;
+    // }
+    // .d-480-none-i {
+    //     display: none!important;
+    // }
+    // .d-480-block {
+    //     display: block;
+    // }
+    // .d-480-block-i {
+    //     display: block!important;
+    // }
+    /*Show and Hide End*/
+}
+
+@include max(d-375) {
+    /*Show and Hide*/
+    @include config-class('d-375-', display, 'none' none, 'none-i' none + !important, 'block' block, 'block-i' block + !important);
+    // .d-375-none {
+    //     display: none;
+    // }
+    // .d-375-none-i {
+    //     display: none!important;
+    // }
+    // .d-375-block {
+    //     display: block;
+    // }
+    // .d-375-block-i {
+    //     display: block!important;
+    // }
+    /*Show and Hide End*/
+}

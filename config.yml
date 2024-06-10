@@ -1,0 +1,37 @@
+production:
+  password: 'theme_kit_key'
+  theme_id: "theme_id"
+  store: mystore.myshopify.com
+  ignore_files:
+  - '*.gif'
+  - '*.jpg'
+  - config/settings_data.json
+  - themekit_ignores
+  - .git
+  - ".git/*"
+  - "*.git/*"
+  - .gitignore
+  - .DS_Store
+  - .DS_Store?
+  - ehthumbs.db
+  - Thumbs.db
+  - config.yml
+
+development:
+  password: 'theme_kit_key'
+  theme_id: "theme_id"
+  store: mystore.myshopify.com
+  ignore_files:
+  - '*.gif'
+  - '*.jpg'
+  - config/settings_data.json
+  - themekit_ignores
+  - .git
+  - ".git/*"
+  - "*.git/*"
+  - .gitignore
+  - .DS_Store
+  - .DS_Store?
+  - ehthumbs.db
+  - Thumbs.db
+  - config.yml

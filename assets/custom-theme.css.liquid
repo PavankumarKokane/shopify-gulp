@@ -1,0 +1,21 @@
+{%- liquid
+  assign font_thin = settings.font_thin
+  assign font_light = settings.font_light
+  assign font_regular = settings.font_regular
+  assign font_medium = settings.font_medium
+  assign font_semibold = settings.font_semibold
+  assign font_bold = settings.font_bold
+  assign font_extrabold = settings.font_extrabold
+  assign font_black = settings.font_black
+%}
+
+{% style %}
+  {{ font_thin | font_face: font_display: 'swap' }}
+  {{ font_light | font_face: font_display: 'swap' }}
+  {{ font_regular | font_face: font_display: 'swap' }}
+  {{ font_medium | font_face: font_display: 'swap' }}
+  {{ font_semibold | font_face: font_display: 'swap' }}
+  {{ font_bold | font_face: font_display: 'swap' }}
+  {{ font_extrabold | font_face: font_display: 'swap' }}
+  {{ font_black | font_face: font_display: 'swap' }}
+{% endstyle %}
